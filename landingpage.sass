@@ -1,0 +1,171 @@
+
+body 
+	font-family: Arial, Helvetica, sans-serif 
+	background: linear-gradient(45deg, #FD8112, #0085CA) 
+	color: #fff 
+	margin: 0 
+	padding: 0 
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+	justify-content: center 
+	height: 100vh 
+	position: relative 
+header 
+	width: 100% 
+	display: flex 
+	justify-content: space-between 
+	align-items: center 
+	padding: 20px 
+	box-sizing: border-box 
+	position: absolute 
+	top: 0 
+	left: 0 
+	right: 0 
+img 
+	width: 150px 
+	height: auto 
+#sign 
+	background-color: transparent 
+	color: #FD8112 
+	padding: 15px 30px 
+	border: 2px solid #FD8112 
+	font-size: 1rem 
+	cursor: pointer 
+	border-radius: 50px 
+	margin-right: auto 
+	padding: 10px 15px 
+	font-size: 1rem 
+	padding: 15px 10px 
+	font-size: 1rem 
+	&:hover 
+		background-color: #9a9ab5 
+.navbar 
+	align-items: center 
+	gap: 20px 
+	display: flex 
+	transition: color 0.3s ease, text-shadow 0.3s 
+	display: none 
+	flex-direction: column 
+	width: 100% 
+	ul 
+		list-style-type: none 
+		display: flex 
+		gap: 20px 
+		padding: 0 
+		margin: 0 
+	a 
+		color: #FD8112 
+		text-decoration: none 
+		font-size: 1.5rem 
+		transition: color 0.3s ease, text-shadow 0.3s ease 
+		&:hover 
+			color: #fff 
+			text-shadow: 0 0 10px #fff 
+	&.show 
+		display: flex 
+		flex-direction: column 
+.hamburger 
+	background-color: transparent 
+	border: 0 
+	display: none 
+	color: #17142d 
+	font-size: 20px 
+	cursor: pointer 
+	outline: none 
+	display: block 
+	display: block 
+	display: block 
+.container 
+	text-align: center 
+	max-width: 800px 
+	margin: 0 auto 
+	padding: 28px 
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+	justify-content: center 
+	height: 100% 
+	position: relative 
+.article 
+	z-index: 1 
+	h1 
+		font-size: 3rem 
+		margin-bottom: 30px 
+		color: #9a9ab5 
+		font-size: 2.5rem 
+		font-size: 2rem 
+	p 
+		color: #9a9ab5 
+		font-size: 1rem 
+		margin-bottom: 20px 
+		font-size: 0.9rem 
+		font-size: 0.8rem 
+#Start 
+	font-family: Arial, Helvetica, sans-serif 
+	background-color: transparent 
+	color: #FD8112 
+	padding: 20px 50px 
+	border: 2px solid #FD8112 
+	font-size: 1rem 
+	cursor: pointer 
+	border-radius: 50px 
+	padding: 15px 40px 
+	padding: 20px 30px 
+	font-size: 1rem 
+	&:hover 
+		background-color: #9a9ab5 
+.slider 
+	width: 500px 
+	height: 500px 
+	background: #17142d 
+	border-radius: 62% 47% 82% 35% / 45% 45% 880% 66% 
+	will-change: border-radius, transform, opacity 
+	animation: sliderShape 5s linear infinite 
+	position: absolute 
+	top: 20% 
+	z-index: 0 
+	width: 300px 
+	height: 300px 
+	top: 20% 
+	width: 400px 
+	height: 300px 
+	top: 35% 
+@keyframes 
+	sliderShape 
+		0%, 100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55% 
+		transform: translate3d(0, 0, 0) rotateZ(0.01deg) 
+34% 
+	border-radius: 70% 30% 46% 54% / 30% 29% 71% 70% 
+	transform: translate3d(0, 5px, 0) rotateZ(0.01deg) 
+50% 
+	transform: translate3d(0, 0, 0) rotateZ(0.01deg) 
+67% 
+	border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% 
+	transform: translate3d(0, -3px, 0) rotateZ(0.01deg) 
+} 
+	@media 
+		only 
+			screen 
+				and 
+					(max-width 
+						&: 
+							1200px) 
+								.slider {
+        width: 500px 
+								height: 400px 
+								top: 30% 
+							992px) 
+								.slider {
+        width: 500px 
+								height: 400px 
+								top: 40% 
+							768px) 
+								.navbar {
+        display: none 
+								flex-direction: column 
+							480px) 
+								.navbar {
+        display: none 
+								flex-direction: column 

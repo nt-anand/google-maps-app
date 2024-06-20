@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landingpage.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo">
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tracking">Tracking</a></li>
+                <li><button id="sign">Sign in</button></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+    </header>
+
+    <div class="container">
+        <div class="article">
+            <h1>Know where you go</h1>
+            <p>By using mapping yourself you won't get lost no matter what</p>
+            <a href="index.html"><button id="Start">Start</button></a>
+        </div>
+        <div class="slider"></div>
+    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+        
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+        });
+    </script>
+    <script>
+        function init() {
+          const btn = document.getElementById("myButton");
+          if (btn.setCapture) {
+            btn.addEventListener("mousedown", mouseDown, false);
+            btn.addEventListener("mouseup", mouseUp, false);
+          } else {
+            document.getElementById("output").textContent =
+              "Sorry, there appears to be no setCapture support on this browser";
+          }
+        }
+  
+        function mouseDown(e) {
+          e.target.setCapture();
+          e.target.addEventListener("mousemove", mouseMoved, false);
+        }
+  
+        function mouseUp(e) {
+          e.target.removeEventListener("mousemove", mouseMoved, false);
+        }
+  
+        function mouseMoved(e) {
+          const output = document.getElementById("output");
+          output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
+        }
+      </script>
+</body>
+</html>
